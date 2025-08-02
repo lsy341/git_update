@@ -1,37 +1,13 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-import time
-import pyautogui
-import pyperclip
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 import sys
-from datetime import datetime
-
-# 크롬 드라이버 자동 업데이트
-from webdriver_manager.chrome import ChromeDriverManager
-
-
-
-# 브라우저 꺼짐 방지
-chrome_options = Options()
-chrome_options.add_experimental_option("detach", True)
-
-# 불필요한 에러 메시지 없애기
-chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
-
-
-service = Service(executable_path=ChromeDriverManager().install())
 
 # pyqt 부분
 import os
 
 # 유효기간 지정
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(__file__)
 UI_PATH = "design.ui"
 
 # 로그인 클래스 생성
